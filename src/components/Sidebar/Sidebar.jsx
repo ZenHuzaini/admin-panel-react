@@ -2,35 +2,44 @@ import React from "react";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import "./sidebar.scss";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
 	return (
 		<div className="sidebar">
 			<div className="top">
-				<span className="logo">Zen Huzaini</span>
+				<Link style={{ textDecoration: "none" }} to="/">
+					<span className="logo">Zen Huzaini</span>
+				</Link>
 			</div>
 			<hr />
 			<div className="center">
 				<ul>
 					<p className="title">MAIN</p>
 					<li>
-						<DashboardIcon className="icon" />
-						<span>Dashboard</span>
+						<Link style={{ textDecoration: "none" }} to="/">
+							<DashboardIcon className="icon" />
+							<span>Dashboard</span>
+						</Link>
 					</li>
 
 					<p className="title">LISTS</p>
 
 					<li>
-						<AccountCircleIcon className="icon" />
-						<span>Users</span>
+						<Link style={{ textDecoration: "none" }} to="/users">
+							<AccountCircleIcon className="icon" />
+							<span>Users</span>
+						</Link>
+					</li>
+					<li>
+						<Link style={{ textDecoration: "none" }} to="/products">
+							<DashboardIcon className="icon" />
+							<span>Products</span>
+						</Link>
 					</li>
 					<li>
 						<DashboardIcon className="icon" />
-						<span>Products</span>
-					</li>
-					<li>
-						<DashboardIcon className="icon" />
-						<span>Delovery</span>
+						<span>Delivery</span>
 					</li>
 					<li>
 						<DashboardIcon className="icon" />
