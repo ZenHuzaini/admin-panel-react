@@ -1,0 +1,45 @@
+.table{
+    .cellWrapper{
+        display: flex;
+        align-items: center;
+
+        .image{
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            margin-right: 10px;
+            object-fit: cover;
+        } 
+    }
+
+    .fat{
+        display: flex;
+        .indicator{
+            display: flex;
+        
+            .overFat, .fatAmount{
+                color: red;
+            }
+        }
+    }
+
+    .protein{
+        padding: 5px;
+        border-radius: 5px;
+
+        &.low{
+            color: goldenrod;
+            background-color:  rgba(245, 207, 111, 0.279);
+        }
+
+        &.medium{
+            color: green;
+            background-color:  rgb(158, 243, 158);
+        }
+
+        &.high{
+            color: red;
+            background-color: rgb(245, 160, 160);
+        }
+    }
+}
