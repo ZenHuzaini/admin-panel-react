@@ -1,6 +1,6 @@
 import React from "react";
 import DashboardIcon from "@mui/icons-material/Dashboard";
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import "./sidebar.scss";
 
 const Sidebar = () => {
@@ -58,9 +58,9 @@ const Sidebar = () => {
 				</ul>
 			</div>
 			<div className="bottom">
-        <div className="colorOption"></div>
-        <div className="colorOption"></div>
-      </div>
+				<div className="colorOption"></div>
+				<div className="colorOption"></div>
+			</div>
 		</div>
 	);
 };
