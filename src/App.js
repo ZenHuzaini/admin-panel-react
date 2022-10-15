@@ -4,6 +4,7 @@ import Login from "./pages/Login/Login";
 import List from "./pages/List/List";
 import Single from "./pages/Single/Single";
 import New from "./pages/New/New";
+import { producInputs, userInputs } from "./datasources/form";
 
 function App() {
 	return (
@@ -16,12 +17,12 @@ function App() {
 						<Route path="users">
 							<Route index element={<List />} />
 							<Route path=":userId" element={<Single />} />
-							<Route path="new" element={<New />} />
+							<Route path="new" element={<New inputs={userInputs} title="Add New User" />} />
 						</Route>
 						<Route path="products">
 							<Route index element={<List />} />
 							<Route path=":productId" element={<Single />} />
-							<Route path="new" element={<New />} />
+							<Route path="new" element={<New inputs={producInputs} title="Add New Product" />} />
 						</Route>
 					</Route>
 				</Routes>
