@@ -17,6 +17,9 @@ const Sidebar = () => {
 						<DashboardIcon className="icon" />
 						<span>Dashboard</span>
 					</li>
+
+					<p className="title">LISTS</p>
+
 					<li>
 						<AccountCircleIcon className="icon" />
 						<span>Users</span>
