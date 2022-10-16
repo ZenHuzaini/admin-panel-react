@@ -128,7 +128,7 @@ function EnhancedTableHead(props) {
 	return (
 		<TableHead>
 			<TableRow>
-				<TableCell padding="checkbox">
+				<TableCell className="tableCell" padding="checkbox">
 					<Checkbox
 						color="primary"
 						indeterminate={numSelected > 0 && numSelected < rowCount}
@@ -140,7 +140,7 @@ function EnhancedTableHead(props) {
 					/>
 				</TableCell>
 				{headCells.map((headCell) => (
-					<TableCell
+					<TableCell className="tableCell"
 						key={headCell.id}
 						align={headCell.numeric ? "right" : "left"}
 						padding={headCell.disablePadding ? "none" : "normal"}
@@ -291,9 +291,8 @@ export default function EnhancedTable() {
 	const emptyRows = page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
 
 	return (
-		<div className="table">
 			<Box sx={{ width: "100%" }}>
-				<Paper sx={{ width: "100%", mb: 2 }}>
+				<Paper sx={{ width: "100%", mb: 2 }} className="table">
 					<EnhancedTableToolbar numSelected={selected.length} />
 					<TableContainer>
 						<Table
@@ -328,7 +327,7 @@ export default function EnhancedTable() {
 												key={row.name}
 												selected={isItemSelected}
 											>
-												<TableCell padding="checkbox">
+												<TableCell className="tableCell" padding="checkbox">
 													<Checkbox
 														color="primary"
 														checked={isItemSelected}
@@ -337,14 +336,14 @@ export default function EnhancedTable() {
 														}}
 													/>
 												</TableCell>
-												<TableCell component="th" id={labelId} scope="row" padding="none">
+												<TableCell className="tableCell" component="th" id={labelId} scope="row" padding="none">
 													<div className="cellWrapper">
 														<img className="image" src={row.image} alt="" srcset="" />
 														{row.name}
 													</div>
 												</TableCell>
-												<TableCell align="right">{row.calories}</TableCell>
-												<TableCell align="right" className="fat">
+												<TableCell className="tableCell" align="right">{row.calories}</TableCell>
+												<TableCell className="tableCell fat" align="right" >
 													<div className="indicator">
 														{row.fat >= 9 ? (
 															<>
@@ -358,8 +357,8 @@ export default function EnhancedTable() {
 														)}
 													</div>
 												</TableCell>
-												<TableCell align="right">{row.carbs}</TableCell>
-												<TableCell align="right">
+												<TableCell className="tableCell" align="right">{row.carbs}</TableCell>
+												<TableCell className="tableCell" align="right">
 													<span className={`protein ${proteinStatus(row.protein)}`}> {row.protein}</span>
 												</TableCell>
 											</TableRow>
@@ -371,7 +370,7 @@ export default function EnhancedTable() {
 											height: (dense ? 33 : 53) * emptyRows,
 										}}
 									>
-										<TableCell colSpan={6} />
+										<TableCell className="tableCell" colSpan={6} />
 									</TableRow>
 								)}
 							</TableBody>
@@ -392,6 +391,5 @@ export default function EnhancedTable() {
 					label="Dense padding"
 				/>
 			</Box>
-		</div>
 	);
 }

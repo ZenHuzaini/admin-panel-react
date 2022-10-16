@@ -6,9 +6,12 @@ import Single from "./pages/Single/Single";
 import New from "./pages/New/New";
 import { producInputs, userInputs } from "./datasources/form";
 
+import "./style/dark.scss";
+
+
 function App() {
 	return (
-		<div className="App">
+		<div className="App dark">
 			<BrowserRouter>
 				<Routes>
 					<Route path="/">

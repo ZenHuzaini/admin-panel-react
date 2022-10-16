@@ -31,6 +31,7 @@ const DataTable = () => {
 
       </div>
     <DataGrid
+    className="dataGrid"
       rows={rows}
       columns={columns.concat(actionColumn)}
       pageSize={10}
