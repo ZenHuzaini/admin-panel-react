@@ -338,7 +338,7 @@ export default function EnhancedTable() {
 												</TableCell>
 												<TableCell className="tableCell" component="th" id={labelId} scope="row" padding="none">
 													<div className="cellWrapper">
-														<img className="image" src={row.image} alt="" srcset="" />
+														<img className="image" src={row.image} alt="" srcSet="" />
 														{row.name}
 													</div>
 												</TableCell>

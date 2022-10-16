@@ -35,7 +35,7 @@ const New = ({ inputs, title }) => {
 									: "/images/no-image.png"
 							}
 							alt=""
-							srcset=""
+							srcSet=""
 						/>
 					</div>
 					<div className="right">
