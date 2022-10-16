@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import LanguageIcon from "@mui/icons-material/Language";
 import CircleNotificationsIcon from "@mui/icons-material/CircleNotifications";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import ChatIcon from "@mui/icons-material/Chat";
 import "./navbar.scss";
+import { DarkModeContext } from "../../context/darkmodeContext";
 
 const Navbar = () => {
+	const { dispatch } = useContext(DarkModeContext);
+
 	return (
 		<div className="navbar">
 			<div className="wrapper">
@@ -23,7 +26,12 @@ const Navbar = () => {
 						<div className="counter">1</div>
 					</div>
 					<div className="item">
-						<DarkModeIcon className="icon" />
+						<DarkModeIcon
+							className="icon"
+							onClick={() => {
+								dispatch({ type: "TOGGLE" });
+							}}
+						/>
 					</div>
 					<div className="item">
 						<ChatIcon className="icon" />
